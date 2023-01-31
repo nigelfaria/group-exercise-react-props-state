@@ -1,9 +1,6 @@
-interface ChuckJokeProps {
-	id: number;
-	joke: string;
-}
+import Joke from "../joke";
 
-const ChuckJoke: React.FC<ChuckJokeProps> = ({id,joke}) => {
+const ChuckJoke: React.FC<Joke> = ({id,joke}) => {
 
 	return (
 		<p>{id}: {joke}</p>

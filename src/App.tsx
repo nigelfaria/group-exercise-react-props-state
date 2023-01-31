@@ -39,6 +39,8 @@ function App() {
 			<h2>Jokes: </h2>
 			{jokes.map(joke => <ChuckJoke id={joke.id} joke={joke.joke} />)}
 
+			<h2>Filtered Jokes:</h2>
+			{jokes.filter(joke => joke.id === 3).map(joke => <ChuckJoke id={joke.id} joke={joke.joke} />)}
 		</div>
 	);
 }

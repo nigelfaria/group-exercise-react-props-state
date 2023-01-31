@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ChuckCard from './components/chuck_card';
 import ChuckInfo from './components/chuck_info';
 import Joke from './joke';
+import ChuckJoke from './components/chuck_joke';
 
 function App() {
 
@@ -30,12 +31,13 @@ function App() {
 		<div className="App">
 
 			<h1>React props and state</h1>
-			<ChuckCard greeting={chuckGreeting}/>
+			<ChuckCard greeting={chuckGreeting} />
 
 			<h2>Chuck Info: </h2>
 			<ChuckInfo whalesSaved={whalesSaved} roundHouseKicks={roundHouseKicks} />
 
 			<h2>Jokes: </h2>
+			{jokes.map(joke => <ChuckJoke id={joke.id} joke={joke.joke} />)}
 
 		</div>
 	);

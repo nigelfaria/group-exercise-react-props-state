@@ -4,6 +4,7 @@ import ChuckCard from './components/chuck_card';
 import ChuckInfo from './components/chuck_info';
 import Joke from './joke';
 import ChuckJoke from './components/chuck_joke';
+import {v4 as uuidv4} from 'uuid';
 
 function App() {
 
@@ -37,10 +38,10 @@ function App() {
 			<ChuckInfo whalesSaved={whalesSaved} roundHouseKicks={roundHouseKicks} />
 
 			<h2>Jokes: </h2>
-			{jokes.map(joke => <ChuckJoke id={joke.id} joke={joke.joke} />)}
+			{jokes.map(joke => <ChuckJoke id={joke.id} joke={joke.joke} key={joke.id} />)}
 
 			<h2>Filtered Jokes:</h2>
-			{jokes.filter(joke => joke.id === 3).map(joke => <ChuckJoke id={joke.id} joke={joke.joke} />)}
+			{jokes.filter(joke => joke.id === 3).map(joke => <ChuckJoke id={joke.id} joke={joke.joke} key={joke.id} />)}
 		</div>
 	);
 }

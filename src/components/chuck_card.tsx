@@ -11,7 +11,6 @@ const ChuckCard:React.FC<ChuckCardProps> = ({greeting}) =>
 	// 💡 As a result, sometimes it is useful to wrap components in Fragments like this:
 	<>
 		<h2>{greeting}</h2>
-
 		<img src={ChuckImage} alt='A handsome man' />
 	</>
 
